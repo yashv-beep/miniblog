@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Blog</title></head>
+<body>
+<h1>All Posts</h1>
+<a href="/create">Create New</a>
+<ul>
+{% for post in posts %}
+<li>
+<a href="/post/{{post[0]}}">{{post[1]}}</a>
+<a href="/edit/{{post[0]}}">Edit</a>
+<a href="/delete/{{post[0]}}">Delete</a>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
